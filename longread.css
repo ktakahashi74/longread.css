@@ -1,4 +1,4 @@
-/*! longread.css v0.1.0 | MIT License | https://github.com/ktakahashi74/longread.css
+/*! longread.css v0.1.1 | MIT License | https://github.com/ktakahashi74/longread.css
  *
  * Reading CSS for essays, papers and long posts on screen, in many
  * languages and scripts.
@@ -29,6 +29,8 @@
   --_lr-measure: 34em;
   --_lr-gap: 1.15em;
   --_lr-heading-weight: 600;
+  --_lr-size-narrow: 1.0625rem;
+  --_lr-leading-narrow: 1.55;
   --_lr-face: var(--longread-font, "Source Serif 4 Variable", "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif);
   font-family: var(--_lr-face);
   font-size: var(--longread-size, var(--_lr-size));
@@ -255,6 +257,7 @@
 .longread:where(:lang(ja)) {
   --_lr-size: 1.125rem;
   --_lr-leading: 1.9;
+  --_lr-leading-narrow: 1.8;
   --_lr-measure: 36em;
   --_lr-gap: 1.4em;
   --_lr-heading-weight: 700;
@@ -262,6 +265,7 @@
 .longread:where(:lang(zh), :lang(ko)) {
   --_lr-size: 1.125rem;
   --_lr-leading: 1.85;
+  --_lr-leading-narrow: 1.75;
   --_lr-measure: 36em;
   --_lr-gap: 1.4em;
   --_lr-heading-weight: 700;
@@ -274,6 +278,8 @@
                 :lang(ta), :lang(te), :lang(kn), :lang(ml), :lang(si)) {
   --_lr-size: 1.25rem;
   --_lr-leading: 1.9;
+  --_lr-size-narrow: 1.25rem;
+  --_lr-leading-narrow: 1.9;
 }
 
 .longread :where(:is(p, li, dt, dd, blockquote, figure, figcaption, caption, th, td, h1, h2, h3, h4, h5, h6,
@@ -342,6 +348,22 @@
 .longread :where(p, li) { text-align: var(--longread-align, start); }
 /* Paragraphs in table cells follow the cell's alignment. */
 .longread :where(th, td) :where(p, li) { text-align: inherit; }
+
+/* Narrow screens: slightly smaller running text keeps lines long enough
+   to read, about 40 Latin or 20 CJK characters at 390px. It is set on the
+   text blocks, not the container, so measures in em do not move when a
+   phone turns. Scripts with tall marks, footnotes and table cells keep
+   their size. */
+@media (max-width: 40rem) {
+  .longread :where(p, li, blockquote, dt, dd) {
+    font-size: min(var(--longread-size, var(--_lr-size)), var(--_lr-size-narrow));
+    line-height: var(--longread-leading, var(--_lr-leading-narrow));
+  }
+  .longread :where(section[role="doc-endnotes"], section[data-footnotes], th, td) :where(p, li, blockquote, dt, dd) {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
 
 /* 4. Exceptions that must win over the language rules --------------- */
 
