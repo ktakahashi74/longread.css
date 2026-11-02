@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>longread.css: GFM markup in several languages</title>
+<link rel="stylesheet" href="../longread.css">
+<style>
+  body { margin: 2rem auto; padding: 0 1.25rem; max-width: 52rem; color: #1f1f1f; background: #fff; }
+  nav { font: 14px/1.5 system-ui, sans-serif; margin-block-end: 2rem; max-inline-size: 40.5rem; margin-inline: auto; }
+  .longread { margin-inline: auto; }
+  article { margin-block-end: 4rem; padding-block-end: 2rem; border-block-end: 1px dashed #ccc; }
+</style>
+</head>
+<body>
+<nav><a href="index.html">Examples</a> · GFM footnote markup (remark-rehype), several languages</nav>
+
+<article class="longread" lang="ja">
+<h2>長い散文を画面で読む</h2>
+<p>この段落は、日本語の本文の組み方を確かめるための見本である。「かぎ括弧」や（丸括弧）が行頭に来たとき、その前の空きが詰まるかを見る。文中にTypeScriptやCSSのような欧文の語が混じるとき、和文との間に少し空きが入るかも見る<sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref aria-describedby="footnote-label">1</a></sup>。</p>
+<p>行末に句読点や閉じ括弧が来ても、禁則に従って次の行の頭には置かれない。長い<span lang="en">internationalization</span>のような英単語は、英語の規則で分けられる。長いURL（<a href="https://example.org/a/very/long/path/that/should/wrap/only/when/it/would/otherwise/overflow/the/line">https://example.org/a/very/long/path/that/should/wrap/only/when/it/would/otherwise/overflow/the/line</a>）は、はみ出すときだけ折り返す。</p>
+<p lang="en">This paragraph is in English inside a Japanese article. It should switch to the Latin typeface, use English hyphenation and ordinary line breaking, and keep the article's size and spacing.</p>
+<h3>リストと引用</h3>
+<ul>
+<li>入れ子のリストの一つ目
+<ul>
+<li>二段目の項目</li>
+</ul>
+</li>
+<li>二つ目の項目</li>
+</ul>
+<ol>
+<li>番号付きの一つ目</li>
+<li>番号付きの二つ目</li>
+</ol>
+<ul>
+<li><input type="checkbox" disabled checked aria-label="済んだ作業"> 済んだ作業</li>
+<li><input type="checkbox" disabled aria-label="残る作業"> 残る作業</li>
+</ul>
+<blockquote>
+<p>引用の段落。線は文字色を薄めて描くので、暗い配色でも読める<sup><a href="#user-content-fn-2" id="user-content-fnref-2" data-footnote-ref aria-describedby="footnote-label">2</a></sup>。</p>
+</blockquote>
+<h3>コードと表</h3>
+<p>文中のコード <code>const x = 1</code> と、コードの塊。</p>
+<pre><code>function main() {
+  return "整形済みのテキストは両端揃えや自動の空きから外す";
+}
+</code></pre>
+<table>
+<thead><tr><th>項目</th><th>値</th><th>備考</th></tr></thead>
+<tbody>
+<tr><td>行長</td><td>36</td><td>日本語の既定（字）</td></tr>
+<tr><td>行間</td><td>1.9</td><td>日本語の既定</td></tr>
+</tbody>
+</table>
+<figure>
+<svg width="320" height="80" viewBox="0 0 320 80" role="img" aria-label="Placeholder figure"><rect x="1" y="1" width="318" height="78" fill="none" stroke="currentColor" stroke-dasharray="4 4"/></svg>
+<figcaption>図のキャプションの見本。</figcaption>
+</figure>
+<hr>
+<p>区切り線の後の段落。</p>
+<h3>境界の見本</h3>
+<table>
+<thead><tr><th align="left">左</th><th align="center">中央</th><th align="right">右（数字）</th></tr></thead>
+<tbody>
+<tr><td align="left">項目</td><td align="center">○</td><td align="right">1,234</td></tr>
+<tr><td align="left">別の項目</td><td align="center">×</td><td align="right">56</td></tr>
+<tr><td align="left"><p>段落入り</p></td><td align="center"><p>中央</p></td><td align="right"><p>789</p></td></tr>
+</tbody>
+</table>
+<ol type="I">
+<li>大文字のローマ数字</li>
+</ol>
+<ol type="a">
+<li>英字の番号の一つ目</li>
+<li>英字の番号の二つ目</li>
+</ol>
+<ul>
+<li>
+<p><input type="checkbox" disabled checked aria-label="段落を含むタスクの項目"> 段落を含むタスクの項目</p>
+<p>二つ目の段落。</p>
+</li>
+<li>
+<p><input type="checkbox" disabled aria-label="もう一つの項目"> もう一つの項目</p>
+</li>
+</ul>
+<dl>
+<dt>定義される語</dt>
+<dd>定義の本文。pandocは定義リストをこの形で出力する。</dd>
+</dl>
+<p>キーボード表記 <kbd>Ctrl</kbd> + <kbd>C</kbd> と、言語の印の付いたコード <code><span lang="en">counterintuitively</span></code>。</p>
+<ul lang="en">
+<li>An English list inside a Japanese article switches to the Latin typeface.</li>
+<li>It also uses English hyphenation for words such as internationalization.</li>
+</ul>
+<h3 lang="en">An English heading with institutionalization is not hyphenated</h3>
+<p>見出しの直後の段落。</p>
+<h3>強調<strong>を含む</strong>見出し</h3>
+<dl>
+<dt>見出しの直後の定義リスト</dt>
+<dd>最初の語の上に余分な空きが出ない。</dd>
+</dl>
+<blockquote>
+<h4>見出しで始まる引用</h4>
+<p>引用の先頭の見出しの上に、余分な空きが出ない。</p>
+</blockquote>
+<figure>
+<figcaption>説明が先に来る図。</figcaption>
+<svg width="320" height="60" viewBox="0 0 320 60" role="img" aria-label="Placeholder figure"><rect x="1" y="1" width="318" height="58" fill="none" stroke="currentColor" stroke-dasharray="4 4"/></svg>
+</figure>
+<section data-footnotes class="footnotes"><h2 class="sr-only" id="footnote-label">注</h2>
+<ol>
+<li id="user-content-fn-1"><p>最初の注。注の一覧は少し小さく組む。 <a href="#user-content-fnref-1" data-footnote-backref aria-label="本文の 1 に戻る" class="data-footnote-backref">↩</a></p></li>
+<li id="user-content-fn-2"><p>二つ目の注。 <a href="#user-content-fnref-2" data-footnote-backref aria-label="本文の 2 に戻る" class="data-footnote-backref">↩</a></p></li>
+</ol>
+</section>
+</article>
+
+<article class="longread" lang="en">
+<h2>Reading long prose on screen</h2>
+<p>This paragraph tests English typesetting: the serif typeface, a line height of 1.6, a measure of about 34 em, and automatic hyphenation of long words such as institutionalization and counterintuitively.<sup><a href="#user-content-fn-3" id="user-content-fnref-3" data-footnote-ref aria-describedby="footnote-label-en">1</a></sup> Headings use balanced wrapping, and paragraphs avoid a single short word on the last line where the browser supports it.</p>
+<p>A Japanese phrase inside English text, <span lang="ja">構成的多元主義</span>, keeps the English line height and size.</p>
+<section data-footnotes class="footnotes"><h2 class="sr-only" id="footnote-label-en">Footnotes</h2>
+<ol><li id="user-content-fn-3"><p>A footnote in English. <a href="#user-content-fnref-3" data-footnote-backref aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p></li></ol>
+</section>
+</article>
+
+<article class="longread" lang="zh-Hans">
+<h2>在屏幕上阅读长文</h2>
+<p>这一段用于检查简体中文的排版：宋体或明体字体、较大的行距，以及中文与English单词之间的自动间距。“引号”和（括号）位于行首时，其前面的空白会被压缩。</p>
+</article>
+
+<article class="longread" lang="zh-Hant">
+<h2>在螢幕上閱讀長文</h2>
+<p>這一段用於檢查繁體中文的排版：明體字型、較大的行距，以及中文與English單詞之間的自動間距。「引號」和（括號）位於行首時，其前面的空白會被壓縮。</p>
+</article>
+
+<article class="longread" lang="ko">
+<h2>화면에서 긴 글 읽기</h2>
+<p>이 단락은 한국어 조판을 확인하기 위한 견본입니다. 한국어는 보통 낱말 중간에서 줄을 바꾸지 않습니다. 낱말이 줄 너비보다 길 때만 낱말 안에서 줄을 바꿉니다.</p>
+</article>
+
+<article class="longread" lang="ar" dir="rtl">
+<h2>قراءة النصوص الطويلة على الشاشة</h2>
+<p>هذه فقرة تجريبية لاختبار عرض النص العربي من اليمين إلى اليسار. يجب أن تظهر الهوامش والمسافات البادئة في الجهة الصحيحة.</p>
+<blockquote><p>اقتباس لاختبار الخط الجانبي في الاتجاه من اليمين إلى اليسار.</p></blockquote>
+<ul><li>عنصر أول</li><li>عنصر ثانٍ</li></ul>
+</article>
+
+<article class="longread" lang="hi">
+<h2>स्क्रीन पर लंबा गद्य पढ़ना</h2>
+<p>यह अनुच्छेद हिंदी पाठ के प्रदर्शन की जाँच के लिए है। देवनागरी अक्षरों के ऊपर और नीचे की मात्राओं के लिए पर्याप्त पंक्ति-अंतर होना चाहिए।</p>
+</article>
+
+<article class="longread" lang="th">
+<h2>การอ่านข้อความยาวบนหน้าจอ</h2>
+<p>ย่อหน้านี้ใช้ตรวจสอบการแสดงผลภาษาไทย ภาษาไทยไม่เว้นวรรคระหว่างคำ จึงต้องอาศัยเบราว์เซอร์ในการตัดบรรทัดตามคำ</p>
+</article>
+</body>
+</html>

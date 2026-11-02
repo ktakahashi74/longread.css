@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>longread.css demo</title>
+<link rel="stylesheet" href="../longread.css">
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 1.25rem 1.25rem 4rem; color: #1f1f1f; background: #fff; }
+  a { color: #1a5fb4; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e3e3e3; background: #161616; }
+    a { color: #8cb4f5; }
+  }
+  .longread .demo-nav, .longread .demo-source { font: 14px/1.6 system-ui, sans-serif; }
+  .longread .demo-nav { display: flex; flex-wrap: wrap; gap: 0.2rem 0.85rem; margin-block-end: 3rem; }
+  .demo-nav a[aria-current] { color: inherit; font-weight: 600; text-decoration: none; }
+  .demo-nav .home { margin-inline-end: 0.6rem; }
+  .longread { margin-inline: auto; }
+  .longread .byline { margin-block-end: 2em; }
+  .longread .demo-source { margin-block-start: 3.5rem; opacity: 0.75; }
+  .longread .demo-source p { margin: 0; }
+</style>
+</head>
+<body>
+<article class="longread" lang="en">
+<h1>longread.css demo</h1>
+<p>The same stylesheet typesets each of these public-domain texts. The pages set only <code>lang</code>, and <code>dir="rtl"</code> for right-to-left text; nothing else is tuned per language. Dark mode follows your system setting.</p>
+<ul>
+<li><a href="en.html" hreflang="en"><span lang="en">English</span></a>: <span lang="en">Detached Thoughts on Books and Reading</span> · <span lang="en">Charles Lamb</span> (1822)</li>
+<li><a href="es.html" hreflang="es"><span lang="es">Español</span></a>: <span lang="es">El ingenioso hidalgo don Quijote de la Mancha</span> · <span lang="es">Miguel de Cervantes Saavedra</span> (1605)</li>
+<li><a href="pt.html" hreflang="pt"><span lang="pt">Português</span></a>: <span lang="pt">A Cidade e as Serras</span> · <span lang="pt">Eça de Queirós</span> (1901)</li>
+<li><a href="fr.html" hreflang="fr"><span lang="fr">Français</span></a>: <span lang="fr">Le Crime de Sylvestre Bonnard</span> · <span lang="fr">Anatole France</span> (1881)</li>
+<li><a href="de.html" hreflang="de"><span lang="de">Deutsch</span></a>: <span lang="de">Die Verwandlung</span> · <span lang="de">Franz Kafka</span> (1915)</li>
+<li><a href="it.html" hreflang="it"><span lang="it">Italiano</span></a>: <span lang="it">Il fu Mattia Pascal</span> · <span lang="it">Luigi Pirandello</span> (1904)</li>
+<li><a href="nl.html" hreflang="nl"><span lang="nl">Nederlands</span></a>: <span lang="nl">Max Havelaar</span> · <span lang="nl">Multatuli</span> (1860)</li>
+<li><a href="id.html" hreflang="id"><span lang="id">Bahasa Indonesia</span></a>: <span lang="id">Azab dan Sengsara</span> · <span lang="id">Merari Siregar</span> (1920)</li>
+<li><a href="vi.html" hreflang="vi"><span lang="vi">Tiếng Việt</span></a>: <span lang="vi">Việt Nam phong tục</span> · <span lang="vi">Phan Kế Bính</span> (1915)</li>
+<li><a href="ru.html" hreflang="ru"><span lang="ru">Русский</span></a>: <span lang="ru">Пари</span> · <span lang="ru">Антон Павлович Чехов</span> (1889)</li>
+<li><a href="ja.html" hreflang="ja"><span lang="ja">日本語</span></a>: <span lang="ja">読書の今昔</span> · <span lang="ja">寺田寅彦</span> (1932)</li>
+<li><a href="zh-Hans.html" hreflang="zh-Hans"><span lang="zh-Hans">简体中文</span></a>: <span lang="zh-Hans">背影</span> · <span lang="zh-Hans">朱自清</span> (1925)</li>
+<li><a href="zh-Hant.html" hreflang="zh-Hant"><span lang="zh-Hant">繁體中文</span></a>: <span lang="zh-Hant">敬業與樂業</span> · <span lang="zh-Hant">梁啟超</span> (1922)</li>
+<li><a href="ko.html" hreflang="ko"><span lang="ko">한국어</span></a>: <span lang="ko">어린이 찬미</span> · <span lang="ko">방정환</span> (1924)</li>
+<li><a href="ar.html" hreflang="ar"><span lang="ar" dir="rtl">العربية</span></a>: <span lang="ar" dir="rtl">النظرات</span> · <span lang="ar" dir="rtl">مصطفى لطفي المنفلوطي</span> (1910)</li>
+<li><a href="fa.html" hreflang="fa"><span lang="fa" dir="rtl">فارسی</span></a>: <span lang="fa" dir="rtl">سفرنامه</span> · <span lang="fa" dir="rtl">ناصر خسرو قبادیانی</span> (1052)</li>
+<li><a href="ur.html" hreflang="ur"><span lang="ur" dir="rtl">اردو</span></a>: <span lang="ur" dir="rtl">آبِ حیات</span> · <span lang="ur" dir="rtl">محمد حسین آزاد</span> (1880)</li>
+<li><a href="hi.html" hreflang="hi"><span lang="hi">हिन्दी</span></a>: <span lang="hi">पंच परमेश्वर</span> · <span lang="hi">प्रेमचंद</span> (1916)</li>
+<li><a href="mr.html" hreflang="mr"><span lang="mr">मराठी</span></a>: <span lang="mr">भास्कराचार्यांची लीलावती</span> · <span lang="mr">हरि नारायण आपटे</span> (1915)</li>
+<li><a href="bn.html" hreflang="bn"><span lang="bn">বাংলা</span></a>: <span lang="bn">শিক্ষার হেরফের</span> · <span lang="bn">রবীন্দ্রনাথ ঠাকুর</span> (1892)</li>
+<li><a href="te.html" hreflang="te"><span lang="te">తెలుగు</span></a>: <span lang="te">సాక్షి సంఘనిర్మాణము</span> · <span lang="te">పానుగంటి లక్ష్మీనరసింహారావు</span> (1913)</li>
+<li><a href="ta.html" hreflang="ta"><span lang="ta">தமிழ்</span></a>: <span lang="ta">நவதந்திரக் கதைகள்</span> · <span lang="ta">சுப்பிரமணிய பாரதி</span> (1916)</li>
+<li><a href="th.html" hreflang="th"><span lang="th">ไทย</span></a>: <span lang="th">ตำนานหนังสือสามก๊ก</span> · <span lang="th">สมเด็จพระเจ้าบรมวงศ์เธอ กรมพระยาดำรงราชานุภาพ</span> (1928)</li>
+</ul>
+<p>See also the <a href="../examples/">test pages</a>, which cover footnotes, tables, lists, math and edge cases, and the <a href="https://github.com/ktakahashi74/longread.css">repository</a>.</p>
+</article>
+</body>
+</html>

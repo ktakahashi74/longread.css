@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>longread.css: math with KaTeX</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\(', right: '\\)', display: false}]}); document.documentElement.dataset.mathReady = '1';"></script>
+<link rel="stylesheet" href="../longread.css">
+<style>
+  body { margin: 2rem auto; padding: 0 1.25rem; max-width: 52rem; color: #1f1f1f; background: #fff; }
+  nav { font: 14px/1.5 system-ui, sans-serif; margin-block-end: 2rem; max-inline-size: 40.5rem; margin-inline: auto; }
+  .longread { margin-inline: auto; }
+  article { margin-block-end: 4rem; padding-block-end: 2rem; border-block-end: 1px dashed #ccc; }
+</style>
+</head>
+<body>
+<nav lang="en"><a href="index.html">Examples</a> · Math with KaTeX (loaded from a CDN for this page only; longread.css itself has no dependency)</nav>
+
+<article class="longread" lang="ja">
+<h2>数式の組み方</h2>
+<p>文中の数式 \(E = mc^2\) や \(\sum_{i=1}^{n} x_i\) の前後で、和文との間の空きが不自然に広がらないかを見る。数式の中には、和欧間の自動の空きや約物の詰めを入れない。添字のある \(\alpha_{t+1} = \alpha_t - \eta \nabla L(\alpha_t)\) のような式が行の途中に来ても、行間が乱れないかも見る<sup><a href="#user-content-fn-m1" id="user-content-fnref-m1" data-footnote-ref aria-describedby="footnote-label-m">1</a></sup>。</p>
+<p>別行立ての数式は、本文の幅に収まらないとき、頁全体を広げずに数式だけが横に流れる。</p>
+$$
+\mathcal{L}(\theta) = -\sum_{t=1}^{T} \log p_\theta\bigl(x_t \mid x_{\lt t}\bigr) + \lambda \lVert \theta \rVert_2^2 + \frac{\beta}{2} \sum_{k=1}^{K} \Bigl( \mathbb{E}_{q(z_k)}\bigl[\log q(z_k) - \log p(z_k)\bigr] \Bigr)^2 + \gamma \int_{0}^{1} \lVert \nabla_x f_\theta(x) \rVert \, dx
+$$
+<p>短い別行立ての式は中央に置かれる。</p>
+$$
+\frac{a}{b} = \sqrt{\frac{c^2 + d^2}{e}}
+$$
+<table>
+<thead><tr><th>記号</th><th align="center">式</th><th align="right">値</th></tr></thead>
+<tbody>
+<tr><td>学習率</td><td align="center">\(\eta = 10^{-3}\)</td><td align="right">0.001</td></tr>
+<tr><td>正則化</td><td align="center">\(\lambda \lVert \theta \rVert^2\)</td><td align="right">—</td></tr>
+</tbody>
+</table>
+<section data-footnotes class="footnotes"><h2 class="sr-only" id="footnote-label-m">注</h2>
+<ol>
+<li id="user-content-fn-m1"><p>注の中の数式 \(\int_0^\infty e^{-x}\,dx = 1\)。 <a href="#user-content-fnref-m1" data-footnote-backref aria-label="本文の 1 に戻る" class="data-footnote-backref">↩</a></p></li>
+</ol>
+</section>
+</article>
+
+<article class="longread" lang="en">
+<h2>Math in English text</h2>
+<p>Inline math such as \(f(x) = \frac{1}{1 + e^{-x}}\) should sit on the line without changing the line height much, and hyphenation should not touch it.</p>
+$$
+p(y \mid x) = \frac{\exp\bigl(s_\theta(x, y)\bigr)}{\sum_{y' \in \mathcal{Y}} \exp\bigl(s_\theta(x, y')\bigr)}
+$$
+</article>
+
+<article class="longread" lang="ar" dir="rtl">
+<h2>الرياضيات في نص عربي</h2>
+<p>معادلة داخل السطر \(a^2 + b^2 = c^2\) ومعادلة منفصلة:</p>
+$$
+\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+$$
+</article>
+</body>
+</html>

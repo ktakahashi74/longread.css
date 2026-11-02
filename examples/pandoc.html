@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>longread.css: pandoc markup (paper)</title>
+<link rel="stylesheet" href="../longread.css">
+<style>
+  body { margin: 2rem auto; padding: 0 1.25rem; max-width: 52rem; }
+  nav { font: 14px/1.5 system-ui, sans-serif; margin-block-end: 2rem; max-inline-size: 40.5rem; margin-inline: auto; }
+  .longread { margin-inline: auto; }
+  /* A host opts in to justified Japanese text where the column is at its full length. */
+  @media (min-width: 44rem) { .longread:lang(ja) { --longread-align: justify; } }
+  .longread :lang(en) { --longread-align: start; }
+</style>
+</head>
+<body>
+<nav lang="en"><a href="index.html">Examples</a> · pandoc footnote markup, Japanese paper with justified text (opt-in)</nav>
+<main class="longread" lang="ja">
+<h2 id="要旨">要旨</h2>
+<p>この見本は、pandocが出力する論文のHTMLを模したものである。注の参照は<code>role="doc-noteref"</code>、注の一覧は<code>role="doc-endnotes"</code>、戻りのリンクは<code>role="doc-backlink"</code>をもつ。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> 両端揃えは使う側の指定で有効にしている。行の長さが十分なとき、和文の行末がそろう。</p>
+<h2 id="問題">1 問題</h2>
+<p>長い論文では、注が巻末にまとまり、本文との往復が増える。注へ飛んだとき、その項目が見出しの帯に隠れないよう、余白をとる。<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> 戻りのリンクで本文に戻ると、参照の番号が輪郭で示される。</p>
+<h3 id="小節">1.1 小節</h3>
+<p>小節の見出しは本文より少し大きく、太字で組む。Rawls、Pettit、Nissenbaumのような人名がラテン文字で並んでも、和文との間に空きが入る。</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Rawls, John. 1982. “The Basic Liberties and Their Priority.” <em>The Tanner Lectures on Human Values</em>, volume 3. 第IV節。<a href="https://tannerlectures.org/documents/the-tanner-lectures-on-human-values-3/">出版元のテキスト</a>。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Nissenbaum, Helen. 2004. “Privacy as Contextual Integrity.” <em>Washington Law Review</em> 79: 119–158. 特に143–149頁。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>longread.css: under a reset, dark theme, compact variant</title>
+<style>
+  /* Emulates the parts of Tailwind Preflight that matter here: margins,
+     paddings, list markers and heading sizes are removed. */
+  *, ::before, ::after { margin: 0; padding: 0; box-sizing: border-box; border: 0 solid; }
+  ol, ul, menu { list-style: none; }
+  h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+  table { border-collapse: collapse; }
+</style>
+<link rel="stylesheet" href="../longread.css">
+<style>
+  /* The page column has the article's line length, and the reply fills the same column. */
+  body { margin: 2rem auto; padding: 0 1.25rem; max-width: 40.5rem; color: #e6e6e6; background: #16181c; font-family: system-ui, sans-serif; }
+  nav { font-size: 14px; margin-block-end: 2rem; }
+  nav a { color: #9cc3ff; }
+  .longread a { color: #9cc3ff; }
+  .reply.longread {
+    --longread-font: system-ui, sans-serif;
+    --longread-font-ja: system-ui, sans-serif;
+    --longread-size: 1rem;
+    --longread-measure: none;
+    --longread-gap: 0.8em;
+    margin-block-start: 3rem;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+<nav lang="en"><a href="index.html">Examples</a> · under a Preflight-like reset, dark theme, and a compact reply</nav>
+<article class="longread" lang="ja">
+<h2>リセットの下と暗い配色</h2>
+<p>リストの印や見出しの大きさを消すリセットの下でも、本文の要素が組めるかを確かめる。線や背景は文字色を薄めて作るので、暗い配色でもそのまま読める。</p>
+<ul><li>一つ目<ul><li>入れ子</li></ul></li><li>二つ目</li></ul>
+<ol><li>番号付き</li><li>番号付き</li></ol>
+<blockquote><p>暗い配色の引用。</p></blockquote>
+<pre><code>console.log("code block on dark");</code></pre>
+<p>文中の<code>code</code>と<a href="#">リンク</a>。</p>
+<table><thead><tr><th>列</th><th>値</th></tr></thead><tbody><tr><td>行</td><td>1</td></tr></tbody></table>
+</article>
+<article class="longread reply" lang="ja">
+<p>返信や確認画面のような詰めた表示は、変数だけで作る。書体をUIのゴシックにし、文字を小さくし、行長の上限を外し、段落の間隔を狭めている。</p>
+<p lang="en">A reply in English inside the same thread uses the same compact variables.</p>
+</article>
+</body>
+</html>
