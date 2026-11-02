@@ -1,4 +1,4 @@
-/*! longread.css v0.1.1 | MIT License | https://github.com/ktakahashi74/longread.css
+/*! longread.css v0.1.2 | MIT License | https://github.com/ktakahashi74/longread.css
  *
  * Reading CSS for essays, papers and long posts on screen, in many
  * languages and scripts.
@@ -289,15 +289,15 @@
 }
 .longread:where(:lang(ja)),
 .longread :where([lang]:lang(ja)) {
-  --_lr-face: var(--longread-font-ja, "Hiragino Mincho ProN", "BIZ UDPMincho", "Yu Mincho", "Noto Serif CJK JP", "Noto Serif JP", serif);
+  --_lr-face: var(--longread-font-ja, "Hiragino Mincho ProN", "BIZ UDPMincho", "BIZ UDPMincho Medium", "Yu Mincho", "Noto Serif CJK JP", "Noto Serif JP", serif);
 }
 .longread:where(:lang(zh)),
 .longread :where([lang]:lang(zh)) {
-  --_lr-face: var(--longread-font-zh-hans, "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", serif);
+  --_lr-face: var(--longread-font-zh-hans, "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", "Microsoft YaHei", serif);
 }
 .longread:where(:lang(zh-Hant), :lang(zh-TW), :lang(zh-HK), :lang(zh-MO)),
 .longread :where([lang]:is(:lang(zh-Hant), :lang(zh-TW), :lang(zh-HK), :lang(zh-MO))) {
-  --_lr-face: var(--longread-font-zh-hant, "Songti TC", "Noto Serif CJK TC", "Source Han Serif TC", "Source Han Serif TW", serif);
+  --_lr-face: var(--longread-font-zh-hant, "Songti TC", "Noto Serif CJK TC", "Source Han Serif TC", "Source Han Serif TW", "Microsoft JhengHei", serif);
 }
 .longread:where(:lang(ko)),
 .longread :where([lang]:lang(ko)) {

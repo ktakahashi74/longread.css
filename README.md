@@ -28,7 +28,7 @@ The column is not centred. Add `.longread { margin-inline: auto; }` to centre it
 
 ## Fonts
 
-longread.css does not load fonts. It uses those on the reader's device: a serif for English and most other languages (Source Serif 4 if the page loads it, otherwise Iowan Old Style, Palatino or Georgia), Mincho for Japanese, Song or Ming for Chinese, Gothic for Korean, and the system font for Thai, Burmese, Khmer, Lao, the Arabic script and the scripts of South Asia. The variables below change them.
+longread.css does not load fonts. It uses those on the reader's device: a serif for English and most other languages (Source Serif 4 if the page loads it, otherwise Iowan Old Style, Palatino or Georgia), Mincho for Japanese, Song or Ming for Chinese (on Windows, which has no Song or Ming face made for long text on screen, Microsoft YaHei or JhengHei), Gothic for Korean, and the system font for Thai, Burmese, Khmer, Lao, the Arabic script and the scripts of South Asia. The variables below change them.
 
 ## Variables
 
